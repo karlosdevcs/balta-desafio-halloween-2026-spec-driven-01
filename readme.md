@@ -2,7 +2,7 @@
 
 ## 🎃 Halloween - Desafio 1
 
-Oi, eu sou o [seu nome aqui] e este é o espaço onde compartilho minha jornada de aprendizado durante o desafio **Halloween 2026**, realizado pelo [balta.io](https://balta.io). 👻
+Oi, eu sou o Karlos e este é o espaço onde compartilho minha jornada de aprendizado durante o desafio **Halloween 2026**, realizado pelo [balta.io](https://balta.io). 👻
 
 Aqui você vai encontrar projetos, exercícios e códigos que estou desenvolvendo durante o desafio.
 
@@ -15,6 +15,15 @@ Neste desafio o objetivo é consolidar os fundamentos do Spec Driven Development
 - `POST /senhas` gera uma senha forte (16–128 caracteres, com maiúscula, minúscula, dígito e caractere especial, sem espaços), armazena e devolve o GUID
 - `GET /senhas/{id}` consulta a senha pelo GUID (400 para GUID inválido, 404 para inexistente, ambos com ProblemDetails)
 - Testes unitários (xUnit) e de integração (WebApplicationFactory + Testcontainers)
+
+Neste processo eu aprendi:
+* ✅ A constituição só funciona com regras verificáveis: "Endpoint não acessa banco diretamente" dá para conferir no código, "código limpo" não
+* ✅ A spec responde **o quê** e **por quê**, sem tecnologia; deixar a stack para o plano evita amarrar a solução antes de entender o problema
+* ✅ Toda decisão do plano precisa de justificativa (e toda dependência nova também), para que daqui a seis meses o "por quê" esteja escrito
+* ✅ Tarefas pequenas, ordenadas e com critério de "concluída quando" permitem auditar o trabalho da IA tarefa por tarefa
+* ✅ Implementar tudo de uma vez fere a própria constituição; a disciplina de uma tarefa por vez é parte do processo, não burocracia
+* ✅ Teste fraco esconde bug: comparar só milissegundos mascarou a perda de precisão da data no PostgreSQL, que violava o critério de aceite CA-05
+* ✅ Quando o código revela algo novo, a spec e o plano são atualizados junto, para que continuem sendo a fonte da verdade
 
 #### Como executar
 
@@ -48,17 +57,16 @@ dotnet build
 dotnet test
 ```
 
-Neste processo eu aprendi:
-* ✅
-
 ## Bagde
 <img src="https://baltaio.blob.core.windows.net/static/images/v4/challenges/halloween-2026/01.png" width="200" />
 
 ## Problema
---
+Pessoas criam senhas fracas, curtas ou previsíveis porque inventar uma senha forte "de cabeça" é difícil, e quando uma ferramenta gera a senha ela costuma se perder logo depois. Esta API gera senhas fortes seguindo um padrão verificável, armazena cada uma e devolve um identificador (GUID) para consultá-la depois. Detalhes em [specs/spec.md](specs/spec.md).
+
+> Aplicação lúdica, apenas para aprendizado de Spec-Driven Development. As senhas não são criptografadas; não use em produção.
 
 ## Sobre o Halloween 2026
 O desafio **Halloween 2026** consiste em implementar implementar o modelo Spec Driven Development de ponta a ponta, criando apps completas com IA.
 
 ### Veja meu progresso no desafio
-[Incluir link para o repositório central]
+[balta-io/balta-desafio-halloween-2026-spec-driven-01](https://github.com/balta-io/balta-desafio-halloween-2026-spec-driven-01)
