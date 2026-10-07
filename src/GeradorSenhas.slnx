@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="GeradorSenhas.Api/GeradorSenhas.Api.csproj" />
+  <Project Path="GeradorSenhas.Application/GeradorSenhas.Application.csproj" />
+  <Project Path="GeradorSenhas.Domain/GeradorSenhas.Domain.csproj" />
+  <Project Path="GeradorSenhas.Infra/GeradorSenhas.Infra.csproj" />
+  <Project Path="GeradorSenhas.IntegrationTests/GeradorSenhas.IntegrationTests.csproj" />
+  <Project Path="GeradorSenhas.UnitTests/GeradorSenhas.UnitTests.csproj" />
+</Solution>
